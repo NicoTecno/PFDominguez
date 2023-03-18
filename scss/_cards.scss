@@ -1,0 +1,132 @@
+.card_generica {
+  margin-top: 1rem;
+  border-radius: 16px;
+}
+
+.conteiner_card {
+  max-width: 1200px;
+  padding: 20px;
+  padding-bottom: 40px;
+  margin: auto;
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.producto {
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.card {
+  width: 300px;
+  position: relative;
+  margin-bottom: 3rem;
+  transition: all 300ms;
+  background-image: url("../imgs/fondos/fondo_hogar7.jpg");
+  border-color: white;
+
+  &:hover {
+    box-shadow: 1px 1px 20px -10px;
+    border-color: white;
+    border-width: 0.2rem;
+    .producto {
+      background-color: rgba(47, 97, 138, 0.24);
+    }
+    .info_producto {
+      margin-left: 0;
+      z-index: 0;
+      transition: 600ms;
+      color: black;
+      position: relative;
+      margin-top: 10rem;
+    }
+    .fondo__info--producto {
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.849);
+      transition: all 400ms cubic-bezier(2, 2, 5, 5);
+      margin-top: 10rem;
+    }
+  }
+}
+
+/* INICIA PRODUCTOS GAMERS*/
+
+.card_gamer {
+  background-image: url("../imgs/fondos/fondo_gamer.avif");
+  &:hover {
+    .producto_gamer {
+      background-color: rgba(111, 0, 255, 0.322);
+    }
+  }
+}
+
+/* INICIA PRODUCTOS PRO GAMERS*/
+
+.card_pro_gamer {
+  background-image: url("../imgs/fondos/fondo_futurista.jpg");
+  &:hover {
+    .producto_gamer {
+      background-color: rgba(0, 89, 255, 0.322);
+    }
+  }
+}
+
+.card_disenio {
+  background-image: url("../imgs/fondos/diseño.avif");
+}
+
+.card_ergonomico {
+  background-image: url("../imgs/fondos/ergonomico.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.producto_pro_gamer {
+  background-image: url("../imgs/marcos/marco_futurista_abajoavif.avif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*PROBANDO EL EXTEND*/
+.arreglo_puntual_pc_pro {
+  @extend .producto_pro_gamer;
+  background-position-y: 1rem;
+}
+
+.info_producto {
+  z-index: -2;
+  color: rgba(255, 255, 255, 0);
+  position: relative;
+}
+
+/* Fondos Filas*/
+.fondo_hogareño {
+  background-image: url("../imgs/fondo_filas_productos/fondo_hogar.jpg");
+}
+
+.fondo_gamer {
+  background-image: url("../imgs/fondo_filas_productos/fondo_gamer.jpg");
+}
+
+.fondo_pro_gamer {
+  background-image: url("../imgs/fondo_filas_productos/fondo_futurista.gif");
+}
+
+.fondo_disenio {
+  background-image: url("../imgs/fondo_filas_productos/diseño.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fondo_ergonomico {
+  background-image: url("../imgs/fondo_filas_productos/ergonomico.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
